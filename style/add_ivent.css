@@ -46,6 +46,86 @@ body {
   opacity: 1;
   text-align: center;
 }
+#form1 {
+  width: 350px;
+  height: 40px;
+  font-size: 20px;
+  position:relative;
+      top:-10px;
+			left:15px;
+}
+#form1::placeholder {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form2 {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  position:relative;
+			left:0px;
+}
+#form2::placeholder {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form3 {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  position:relative;
+			left:0px;
+}
+#form3::placeholder {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form4 {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  position:relative;
+      top:200px;
+			left:15px;
+}
+#form4::placeholder {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form5 {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  position:relative;
+      top:225px;
+			left:15px;
+}
+#form5::tag {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form6 {
+  font-size: 20px;
+  position:relative;
+      top:250px;
+			left:15px;
+}
+textarea::placeholder {
+  text-align: center;
+  position:relative;
+      top:75px;
+  font-size: 1em;
+  color: rgba(0,0,0,0.3);
+}
+textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+  font-size: 1.2em;
+}
+div. { 
+  left: 25px;
+  }
 .v78_363 {
   width: 360px;
   height: 40px;
@@ -156,7 +236,7 @@ body {
   color: rgba(0,0,0,1);
   position: absolute;
   top: 6px;
-  left: 310px;
+  left: 303px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 24px;
@@ -219,7 +299,7 @@ body {
   color: rgba(0,0,0,1);
   position: absolute;
   top: 6px;
-  left: 310px;
+  left: 303px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 24px;
