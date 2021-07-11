@@ -30,7 +30,7 @@ body {
   background: rgba(255,244,0,1);
   opacity: 1;
   position: relative;
-  top: 0px;
+  top: -64px;
   left: 0px;
   overflow: hidden;
 }
@@ -38,7 +38,7 @@ body {
   width: 57px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 3px;
+  top: -11px;
   left: 22px;
   font-family: Roboto;
   font-weight: Regular;
@@ -77,8 +77,8 @@ body {
   width: 360px;
   color: rgba(0,0,0,0.25);
   position: relative;
-  top: 0px;
-  left: 0px;
+  top: -35px;
+  left: 80px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 24px;
@@ -116,8 +116,8 @@ body {
   width: 360px;
   color: rgba(0,0,0,0.25);
   position: relative;
-  top: 0px;
-  left: 0px;
+  top: -35px;
+  left: 120px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 24px;
@@ -156,7 +156,7 @@ body {
   color: rgba(0,0,0,1);
   position: absolute;
   top: 6px;
-  left: 37px;
+  left: 310px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 24px;
@@ -219,7 +219,7 @@ body {
   color: rgba(0,0,0,1);
   position: absolute;
   top: 6px;
-  left: 37px;
+  left: 310px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 24px;
