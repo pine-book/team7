@@ -35,14 +35,17 @@ body {
   overflow: hidden;
 }
 .v78_362 {
-  width: 57px;
+  width: 100px;
+  height: 75px;
   color: rgba(0,0,0,1);
+  background: rgba(0,0,0,0);
   position: absolute;
   top: -11px;
-  left: 22px;
+  left: 0px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 72px;
+  border: none; 
   opacity: 1;
   text-align: center;
 }
