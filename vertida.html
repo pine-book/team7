@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
-   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="./style/add_ivent.css" rel="stylesheet" />
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-   </head>
-   <body>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="./style/add_ivent.css" rel="stylesheet" />
+   <title>Document</title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
       <div class="v78_359">
          <div class="v78_360"></div>
          <div class="v78_361"></div>
-         <form action="" method="post" >
-            <input type="text" name="name" placeholder="イベントを追加" id="form1"><br>
-            <input type="text" name="name" placeholder="場所を追加" id="form4"><br>
-         <div class="v78_369">
-               <input type="text" name="name" placeholder="7/24/12:30" id="form3"><br>
-            <span class="v78_371">から</span>
-         </div>
-         <div class="v78_373">
-               <input type="text" name="name" placeholder="7/24/15:00" id="form2"><br>
-            <span class="v78_376">まで</span>
-         </div>
+         <button type="button" class="btn-menu">+</button>
+      <nav>
+            <form action="" method="post">
+               <input type="text" name="name" placeholder="イベントを追加" id="form1">
+               <input type="text" name="name" placeholder="場所を追加" id="form4">
+               <div class="v78_369">
+                  <input type="text" name="name" placeholder="7/24/12:30" id="form3">
+                  <span class="v78_371">から</span>
+               </div>
+               <div class="v78_373">
+                  <input type="text" name="name" placeholder="7/24/15:00" id="form2">
+                  <span class="v78_376">まで</span>
+               </div>
                <select type="text" name="name" id="form5">
                   <option value="">タグを選択</option>
                   <option value="dog">仕事</option>
@@ -33,10 +37,14 @@
                   <option value="spider">趣味</option>
                   <option value="goldfish">デート</option>
                </select>
-               <button type="button" onclick="submit();" class="v78_362">+</button>
-         </form>
-         <form action="#" method="post" id="form6">
-            <textarea name="comment" cols="50" rows="5" placeholder="説明を追加"  ></textarea></p>
-         </form>
-   </body>
+              <button type="button" onclick="submit();" class="make-button">作成</button>
+            </form>
+            <form action="#" method="post" id="form6">
+               <textarea name="comment" cols="50" rows="5" placeholder="説明を追加"></textarea></p>
+            </form>
+      </nav>
+
+   <script type="text/javascript" src="src/menu.js"></script>
+</body>
+
 </html>
