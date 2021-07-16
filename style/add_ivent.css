@@ -50,10 +50,11 @@ nav {
   position: absolute;
   z-index: 1;
   top: 60px;
-  right: 0;
+  left: 0;
   overflow-x: hidden;
   text-align: center;
   width: 0%;
+  transition: .4s;
 }
 nav.open-menu {
   width: 100%;
@@ -185,7 +186,8 @@ textarea {
   height: 40px;
   font-size: 20px;
   position:relative;
-			left:0px;
+      top: 25px;
+			left:-4px;
 }
 #form2::placeholder {
   text-align: center;
@@ -219,7 +221,7 @@ textarea {
   height: 40px;
   font-size: 16px;
   position:relative;
-      top:200px;
+      top:120px;
 			left:-4px;
 }
 #form5::tag {
@@ -236,7 +238,7 @@ textarea {
 textarea::placeholder {
   text-align: center;
   position:relative;
-      top:75px;
+      top:35px;
   font-size: 1em;
   color: rgba(0,0,0,0.3);
 }
@@ -245,6 +247,8 @@ textarea {
   width:300px;
   height:200px;
   font-size: 1.2em;
+  position:relative;
+      top:-80px;
 }
 .v78_369 {
   width: 355px;
@@ -272,8 +276,8 @@ textarea {
   width: 48px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 6px;
-  left: 303px;
+  top: 85px;
+  left: 330px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 24px;
@@ -292,20 +296,12 @@ textarea {
   opacity: 1;
   text-align: center;
 }
-.v78_373 {
-  width: 355px;
-  height: 40px;
-  position: absolute;
-  top: 150px;
-  left: 15px;
-  overflow: hidden;
-}
 .v78_376 {
   width: 48px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 6px;
-  left: 303px;
+  top: 150px;
+  left: 330px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 24px;
