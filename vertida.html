@@ -12,32 +12,36 @@
 </head>
 
 <body>
-   <div class="v78_359">
-      <div class="v78_360"></div>
-      <div class="v78_361"></div>
-      <form action="" method="post">
-         <input type="text" name="name" placeholder="イベントを追加" id="form1"><br>
-         <input type="text" name="name" placeholder="場所を追加" id="form4"><br>
-         <div class="v78_369">
-            <input type="text" name="name" placeholder="7/24/12:30" id="form3"><br>
-            <span class="v78_371">から</span>
-         </div>
-         <div class="v78_373">
-            <input type="text" name="name" placeholder="7/24/15:00" id="form2"><br>
-            <span class="v78_376">まで</span>
-         </div>
-         <select type="text" name="name" id="form5">
-            <option value="">タグを選択</option>
-            <option value="dog">仕事</option>
-            <option value="cat">勉強</option>
-            <option value="hamster">課題</option>
-            <option value="parrot">開発</option>
-            <option value="spider">趣味</option>
-            <option value="goldfish">デート</option>
-         </select>
-         <input type="submit" value='+'onclick="multipleaction('/a/')" class="v78_362"></input>
-         <textarea id="form6" name="comment" cols="50" rows="5" placeholder="説明を追加"></textarea></p>
-      </form>
+      <div class="screen">
+         <div class="top_ver"></div>
+         <div class="yellow_button"></div>
+         <button type="button" class="btn-menu">+</button>
+      <nav>
+         <!-- actionにはサーバーのURLが入ります -->
+            <form action="" method="post">
+               <input type="text" name="event_name" placeholder="イベントを追加" id="form1">
+               <input type="text" name="place_name" placeholder="場所を追加" id="form4">
+                  <input type="text" name="time_from" placeholder="7/24/12:30" id="form3">
+                  <span class="kara">から</span>
+                  <input type="text" name="time_to" placeholder="7/24/15:00" id="form2">
+                  <span class="made">まで</span>
+               <select type="text" name="job_tag" id="form5">
+                  <option value="none">タグを選択</option>
+                  <option value="work">仕事</option>
+                  <option value="study">勉強</option>
+                  <option value="task">課題</option>
+                  <option value="develop">開発</option>
+                  <option value="hobby">趣味</option>
+                  <option value="date">デート</option>
+               </select>
+              <button type="button" onclick="submit();" class="make-button">作成</button>
+            </form>
+            <form action="#" method="post" id="form6">
+               <textarea name="comment" cols="50" rows="5" placeholder="説明を追加"></textarea></p>
+            </form>
+      </nav>
+
+   <script type="text/javascript" src="src/menu.js"></script>
 </body>
 
 </html>

@@ -4,37 +4,22 @@
 body {
   font-size: 14px;
 }
-.v78_359 {
-  width: 390px;
-  height: 700px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+header {
+  background: #333;
+  padding: .5rem;
+  text-align: right;
 }
-.v78_360 {
-  width: 390px;
-  height: 64px;
-  background: rgba(196,196,196,1);
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+a {
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
 }
-.v78_361 {
-  width: 100px;
-  height: 64px;
-  background: rgba(255,244,0,1);
-  opacity: 1;
-  position: relative;
-  top: -64px;
-  left: 0px;
-  overflow: hidden;
+li {
+  margin: 2rem 0;
 }
-.v78_362 {
+ 
+/* ボタン */
+.btn-menu {
   width: 100px;
   height: 75px;
   color: rgba(0,0,0,1);
@@ -49,13 +34,68 @@ body {
   opacity: 1;
   text-align: center;
 }
-#form1 {
-  width: 350px;
+ 
+.make-button {
+  width: 60px;
+  height: 40px;
+  color: rgba(0,0,0,1);
+  background: rgba(255,0,0,1);
+  position: absolute;
+  top: 20px;
+  left: 330px;
+}
+/* メニュー */
+nav {
+  background: #0bd;
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  left: 0;
+  overflow-x: hidden;
+  text-align: center;
+  width: 0%;
+  transition: .4s;
+}
+nav.open-menu {
+  width: 100%;
+  height: 700px;
+}
+.screen {
+  width: 390px;
+  height: 700px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.top_ver {
+  width: 390px;
+  height: 64px;
+  background: rgba(196,196,196,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.yellow_button {
+  width: 100px;
+  height: 64px;
+  background: rgba(255,244,0,1);
+  opacity: 1;
+  position: relative;
+  top: -64px;
+  left: 0px;
+  overflow: hidden;
+}#form1 {
+  width: 200px;
   height: 40px;
   font-size: 20px;
   position:relative;
-      top:-10px;
-			left:15px;
+      top:20px;
+			left:-33px;
 }
 #form1::placeholder {
   text-align: center;
@@ -66,7 +106,8 @@ body {
   height: 40px;
   font-size: 20px;
   position:relative;
-			left:0px;
+            top:px;
+			left:-33px;
 }
 #form2::placeholder {
   text-align: center;
@@ -76,8 +117,8 @@ body {
   width: 300px;
   height: 40px;
   font-size: 20px;
-  position:relative;
-			left:0px;
+  position: absolute;
+	left:-4px;
 }
 #form3::placeholder {
   text-align: center;
@@ -89,7 +130,7 @@ body {
   font-size: 20px;
   position:relative;
       top:200px;
-			left:15px;
+			left:-33px;
 }
 #form4::placeholder {
   text-align: center;
@@ -101,7 +142,7 @@ body {
   font-size: 16px;
   position:relative;
       top:225px;
-			left:15px;
+			left:-33px;
 }
 #form5::tag {
   text-align: center;
@@ -111,7 +152,7 @@ body {
   font-size: 20px;
   position:relative;
       top:250px;
-			left:15px;
+			left:-33px;
 }
 textarea::placeholder {
   text-align: center;
@@ -126,23 +167,100 @@ textarea {
   height:200px;
   font-size: 1.2em;
 }
+#form1 {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  position:relative;
+      top:autopx;
+			left:-4px;
+			
+}
+#form1::placeholder {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form2 {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  position:relative;
+      top: 25px;
+			left:-4px;
+}
+#form2::placeholder {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form3 {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  position:relative;
+			left:-4px;
+}
+#form3::placeholder {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form4 {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  position:relative;
+      top:173px;
+			left:-4px;
+}
+#form4::placeholder {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form5 {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  position:relative;
+      top:120px;
+			left:-4px;
+}
+#form5::tag {
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+#form6 {
+  font-size: 20px;
+  position:relative;
+      top:250px;
+			left:-4px;
+			top:220px;
+}
+textarea::placeholder {
+  text-align: center;
+  position:relative;
+      top:35px;
+  font-size: 1em;
+  color: rgba(0,0,0,0.3);
+}
+textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+  font-size: 1.2em;
+  position:relative;
+      top:-80px;
+}
 .v78_369 {
   width: 355px;
   height: 40px;
-  background: url("../images/v78_369.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 195px;
+  top: 90px;
   left: 15px;
   overflow: hidden;
 }
 .v78_370 {
   width: 300px;
   height: 40px;
-  background: url("../images/v78_370.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -153,15 +271,14 @@ textarea {
   border: 1px solid rgba(0,0,0,1);
   overflow: hidden;
 }
-.v78_371 {
+.kara {
   width: 48px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 6px;
-  left: 303px;
+  top: 85px;
+  left: 343px;
   font-family: Roboto;
-  font-weight: Regular;
-  font-size: 24px;
+  font-size: 20px;
   opacity: 1;
   text-align: center;
 }
@@ -177,28 +294,15 @@ textarea {
   opacity: 1;
   text-align: center;
 }
-.v78_373 {
-  width: 355px;
-  height: 40px;
-  background: url("../images/v78_373.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 278px;
-  left: 15px;
-  overflow: hidden;
-}
-.v78_376 {
+.made {
   width: 48px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 6px;
-  left: 303px;
+  top: 150px;
+  left: 343px;
   font-family: Roboto;
   font-weight: Regular;
-  font-size: 24px;
+  font-size: 20px;
   opacity: 1;
   text-align: center;
 }
