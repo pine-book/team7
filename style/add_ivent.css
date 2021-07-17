@@ -197,7 +197,7 @@ textarea {
   height: 40px;
   font-size: 20px;
   position:relative;
-			left:0px;
+			left:-4px;
 }
 #form3::placeholder {
   text-align: center;
