@@ -12,36 +12,124 @@
 </head>
 
 <body>
-      <div class="screen">
-         <div class="top_ver"></div>
-         <div class="yellow_button"></div>
-         <button type="button" class="btn-menu">+</button>
+   <div class="header">
+      <div class="yellow_button"></div>
+      <button type="button" class="btn-menu">+</button>
+   </div>
+
+   <div class="leftscreen">
+      <div class="todays_scheduel">
+         <div class="date">4月1日(lie)</div>
+         <div class="time_line">
+            <div class="time">
+               <span class="time">00:00</span>
+            </div>
+            <div class="time">
+               <span class="time">1:00</span>
+            </div>
+            <div class="time">
+               <span class="time">2:00</span>
+            </div>
+            <div class="time">
+               <span class="time">3:00</span>
+            </div>
+            <div class="time">
+               <span class="time">4:00</span>
+            </div>
+            <div class="time">
+               <span class="time">5:00</span>
+            </div>
+            <div class="time">
+               <span class="time">6:00</span>
+            </div>
+            <div class="time">
+               <span class="time">7:00</span>
+            </div>
+            <div class="time">
+               <span class="time">8:00</span>
+            </div>
+            <div class="time">
+               <span class="time">9:00</span>
+            </div>
+            <div class="time">
+               <span class="time">10:00</span>
+            </div>
+            <div class="time">
+               <span class="time">11:00</span>
+            </div>
+            <div class="time">
+               <span class="time">12:00</span>
+            </div>
+            <div class="time">
+               <span class="time">13:00</span>
+            </div>
+            <div class="time">
+               <span class="time">14:00</span>
+            </div>
+            <div class="time">
+               <span class="time">15:00</span>
+            </div>
+            <div class="time">
+               <span class="time">16:00</span>
+            </div>
+            <div class="time">
+               <span class="time">17:00</span>
+            </div>
+            <div class="time">
+               <span class="time">18:00</span>
+            </div>
+            <div class="time">
+               <span class="time">19:00</span>
+            </div>
+            <div class="time">
+               <span class="time">20:00</span>
+            </div>
+            <div class="time">
+               <span class="time">21:00</span>
+            </div>
+            <div class="time">
+               <span class="time">22:00</span>
+            </div>
+            <div class="time">
+               <span class="time">21:00</span>
+            </div>
+            <div class="time">
+               <span class="time">22:00</span>
+            </div>
+            <div class="time">
+               <span class="time">23:00</span>
+            </div>
+            <div class="time">
+               <span class="time">24:00</span>
+            </div>
+      </div>
+
       <nav>
          <!-- actionにはサーバーのURLが入ります -->
-            <form action="" method="post">
-               <input type="text" name="event_name" placeholder="イベントを追加" id="form1">
-               <input type="text" name="place_name" placeholder="場所を追加" id="form4">
-                  <input type="text" name="time_from" placeholder="7/24/12:30" id="form3">
-                  <span class="kara">から</span>
-                  <input type="text" name="time_to" placeholder="7/24/15:00" id="form2">
-                  <span class="made">まで</span>
-               <select type="text" name="job_tag" id="form5">
-                  <option value="none">タグを選択</option>
-                  <option value="work">仕事</option>
-                  <option value="study">勉強</option>
-                  <option value="task">課題</option>
-                  <option value="develop">開発</option>
-                  <option value="hobby">趣味</option>
-                  <option value="date">デート</option>
-               </select>
-              <button type="button" onclick="submit();" class="make-button">作成</button>
-            </form>
-            <form action="#" method="post" id="form6">
-               <textarea name="comment" cols="50" rows="5" placeholder="説明を追加"></textarea></p>
-            </form>
+         <form action="" method="post">
+            <input type="text" name="event_name" placeholder="イベントを追加" id="form1">
+            <input type="text" name="place_name" placeholder="場所を追加" id="form4">
+            <input type="text" name="time_from" placeholder="7/24/12:30" id="form3">
+            <span class="kara">から</span>
+            <input type="text" name="time_to" placeholder="7/24/15:00" id="form2">
+            <span class="made">まで</span>
+            <select type="text" name="job_tag" id="form5">
+               <option value="none">タグを選択</option>
+               <option value="work">仕事</option>
+               <option value="study">勉強</option>
+               <option value="task">課題</option>
+               <option value="develop">開発</option>
+               <option value="hobby">趣味</option>
+               <option value="date">デート</option>
+            </select>
+            <button type="button" onclick="submit();" class="make-button">作成</button>
+         </form>
+         <form action="#" method="post" id="form6">
+            <textarea name="comment" cols="50" rows="5" placeholder="説明を追加"></textarea></p>
+         </form>
       </nav>
 
-   <script type="text/javascript" src="src/menu.js"></script>
+      <script type="text/javascript" src="src/menu.js"></script>
 </body>
 
 </html>
