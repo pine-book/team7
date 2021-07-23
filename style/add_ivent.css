@@ -28,21 +28,27 @@ body {
   background: rgba(202, 255, 226, 0.46);
   overflow: hidden
 }
- .date{
+ #date{
    /* 7/11(FRI) */
-position: absolute;
-width: auto;
+width: 200px;
 height: 40px;
-left: 120px;
-top: 20px;
-font-size: 24px;
+position: relative;
+left: 0;
+top: 10px;
+font-size: 30px;
 /* identical to box height */
-
 display: flex;
+flex-direction: column;
 align-items: center;
 text-align: center;
 letter-spacing: 0.14em;
 text-decoration-line: underline;
+ }
+ #day_task{
+   width: auto;
+   height: auto;
+   position: relative;
+   font-size: 20px;
  }
  .time {
   width: 48px;
@@ -110,7 +116,15 @@ nav.open-menu {
   top: 0px;
   left: 0px;
   overflow: hidden;
-}#form1 {
+}
+#button{
+  font-size: 60px;
+  position:absolute;
+      top:100px;
+			left:0px;
+}
+
+#form1 {
   width: 200px;
   height: 40px;
   font-size: 20px;
