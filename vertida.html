@@ -13,7 +13,7 @@
    <script src="src/getSource.js"></script>
 </head>
 
-<body>
+<body onload="show_day()">
    <div class="header">
       <div class="yellow_button"></div>
       <button type="button" class="btn-menu">+</button>
@@ -21,8 +21,8 @@
 
    <div class="leftscreen">
       <div class="todays_scheduel">
-         <div id="date">
-            <input type="button" value="読み込み" onclick="show_day()" />
+         <div id="date1">
+            <p id="date"></p>
             <div id="data"></div>
          </div>
       </div>
