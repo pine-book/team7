@@ -1,343 +1,375 @@
 * {
-  box-sizing: border-box;
-}
-body {
-  font-size: 14px;
-}
-.header {
-  width: 1240px;
-  height: 64px;
-  background: rgba(196,196,196,1);
-  opacity: 1;
-  position: relative;
-  top: -10px;
-  left: -10px;
-  overflow: hidden;
-}
-.leftscreen {
-  width: 390px;
-  height: 500px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: relative;
-  top: -10px;
-  left: 0px;
-}
-.todays_scheduel {
-  height: 600px;
-  background: rgba(202, 255, 226, 0.46);
-  overflow: hidden
-}
- #date{
-   /* 7/11(FRI) */
-width: 200px;
-height: 40px;
-position: relative;
-left: 0;
-top: 10px;
-font-size: 30px;
-/* identical to box height */
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-letter-spacing: 0.14em;
-text-decoration-line: underline;
- }
- #day_task{
-   width: auto;
-   height: auto;
-   position: relative;
-   font-size: 20px;
- }
- .time {
-  width: 48px;
-  color: rgba(0,0,0,0.30000001192092896);
-  position: relative;
-  top: 0px;
-  left: 0px;
-  font-family: Roboto;
-  font-weight: Regular;
-  font-size: 14px;
-  opacity: 1;
-  text-align: center;
-}
-/* ボタン */
-.btn-menu {
-  width: 100px;
-  height: 75px;
-  z-index: 10;
-  color: rgba(0,0,0,1);
-  background: rgba(0,0,0,0);
-  position: absolute;
-  top: -10px;
-  left: 0px;
-  font-family: Roboto;
-  font-weight: Regular;
-  font-size: 72px;
-  border: none; 
-  opacity: 1;
-  text-align: center;
-}
- 
-.make-button {
-  width: 60px;
-  height: 40px;
-  color: rgba(0,0,0,1);
-  background: rgba(255,0,0,1);
-  position: absolute;
-  top: 0px;
-  left: 330px;
-}
-/* メニュー */
-nav {
-  background: #0bd;
-  position: absolute;
-  z-index: 1;
-  top: 0px;
-  left: 0;
-  overflow-x: hidden;
-  text-align: center;
-  width: 0%;
-  transition: .4s;
-}
-nav.open-menu {
-  width: 100%;
-  height: 700px;
+    box-sizing: border-box;
 }
 
+body {
+    font-size: 14px;
+}
+
+.header {
+    width: 1240px;
+    height: 64px;
+    background: rgba(196, 196, 196, 1);
+    opacity: 1;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+}
+
+.leftscreen {
+    width: 390px;
+    height: 500px;
+    background: rgba(255, 255, 255, 1);
+    opacity: 1;
+    position: relative;
+    top: -10px;
+    left: 0px;
+}
+
+.todays_scheduel {
+    height: 600px;
+    background: rgba(202, 255, 226, 0.46);
+    overflow: hidden
+}
+
+#date {
+    position: absolute;
+    width: 129px;
+    height: 40px;
+    left: 100px;
+    top: 0px;
+    font-size: 32px;
+    line-height: 40px;
+    text-decoration-line: underline;
+}
+
+.task_time {
+    position: relative;
+    width: 94px;
+    height: 23px;
+    left: 13px;
+    top: 30px;
+    color: rgba(38, 45, 51, 0.6);
+    font-size: 18px;
+}
+
+.task_name {
+    font-size: 40px;
+}
+
+
+/* ボタン */
+
+.btn-menu {
+    width: 100px;
+    height: 75px;
+    z-index: 10;
+    color: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    font-family: Roboto;
+    font-weight: Regular;
+    font-size: 72px;
+    border: none;
+    opacity: 1;
+    text-align: center;
+}
+
+.make-button {
+    width: 60px;
+    height: 40px;
+    color: rgba(0, 0, 0, 1);
+    background: rgba(255, 0, 0, 1);
+    position: absolute;
+    top: 0px;
+    left: 330px;
+}
+
+
+/* メニュー */
+
+nav {
+    background: #0bd;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    overflow-x: hidden;
+    text-align: center;
+    width: 0%;
+    transition: .4s;
+}
+
+nav.open-menu {
+    width: 100%;
+    height: 700px;
+}
 
 .yellow_button {
-  width: 100px;
-  height: 64px;
-  background: rgba(255,244,0,1);
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+    width: 100px;
+    height: 64px;
+    background: rgba(255, 244, 0, 1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
 }
-#button{
-  font-size: 60px;
-  position:absolute;
-      top:100px;
-			left:0px;
+
+#button {
+    font-size: 60px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    size: 20ch;
 }
 
 #form1 {
-  width: 200px;
-  height: 40px;
-  font-size: 20px;
-  position:relative;
-      top:20px;
-			left:-33px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    left: -33px;
 }
+
 #form1::placeholder {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form2 {
-  width: 300px;
-  height: 40px;
-  font-size: 20px;
-  position:relative;
-            top:px;
-			left:-33px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    top: px;
+    left: -33px;
 }
+
 #form2::placeholder {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form3 {
-  width: 300px;
-  height: 40px;
-  font-size: 20px;
-  position: absolute;
-	left:-4px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    position: absolute;
+    left: -4px;
 }
+
 #form3::placeholder {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form4 {
-  width: 300px;
-  height: 40px;
-  font-size: 20px;
-  position:relative;
-      top:200px;
-			left:-33px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    top: 200px;
+    left: -33px;
 }
+
 #form4::placeholder {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form5 {
-  width: 300px;
-  height: 40px;
-  font-size: 16px;
-  position:relative;
-      top:225px;
-			left:-33px;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    position: relative;
+    top: 225px;
+    left: -33px;
 }
+
 #form5::tag {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form6 {
-  font-size: 20px;
-  position:relative;
-      top:250px;
-			left:-33px;
+    font-size: 20px;
+    position: relative;
+    top: 250px;
+    left: -33px;
 }
+
 textarea::placeholder {
-  text-align: center;
-  position:relative;
-      top:75px;
-  font-size: 1em;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+    top: 75px;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 textarea {
-  resize: none;
-  width:300px;
-  height:200px;
-  font-size: 1.2em;
+    resize: none;
+    width: 300px;
+    height: 200px;
+    font-size: 1.2em;
 }
+
 #form1 {
-  width: 300px;
-  height: 40px;
-  font-size: 20px;
-  position:relative;
-      top:autopx;
-			left:-4px;
-			
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    top: autopx;
+    left: -4px;
 }
+
 #form1::placeholder {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form2 {
-  width: 300px;
-  height: 40px;
-  font-size: 20px;
-  position:relative;
-      top: 25px;
-			left:-4px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+    left: -4px;
 }
+
 #form2::placeholder {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form3 {
-  width: 300px;
-  height: 40px;
-  font-size: 20px;
-  position:relative;
-			left:-4px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    left: -4px;
 }
+
 #form3::placeholder {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form4 {
-  width: 300px;
-  height: 40px;
-  font-size: 20px;
-  position:relative;
-      top:173px;
-			left:-4px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    top: 173px;
+    left: -4px;
 }
+
 #form4::placeholder {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form5 {
-  width: 300px;
-  height: 40px;
-  font-size: 16px;
-  position:relative;
-      top:120px;
-			left:-4px;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    position: relative;
+    top: 120px;
+    left: -4px;
 }
+
 #form5::tag {
-  text-align: center;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 #form6 {
-  font-size: 20px;
-  position:relative;
-      top:250px;
-			left:-4px;
-			top:220px;
+    font-size: 20px;
+    position: relative;
+    top: 250px;
+    left: -4px;
+    top: 220px;
 }
+
 textarea::placeholder {
-  text-align: center;
-  position:relative;
-      top:35px;
-  font-size: 1em;
-  color: rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+    top: 35px;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.3);
 }
+
 textarea {
-  resize: none;
-  width:300px;
-  height:200px;
-  font-size: 1.2em;
-  position:relative;
-      top:-80px;
+    resize: none;
+    width: 300px;
+    height: 200px;
+    font-size: 1.2em;
+    position: relative;
+    top: -80px;
 }
+
 .v78_369 {
-  width: 355px;
-  height: 40px;
-  opacity: 1;
-  position: absolute;
-  top: 90px;
-  left: 15px;
-  overflow: hidden;
+    width: 355px;
+    height: 40px;
+    opacity: 1;
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    overflow: hidden;
 }
+
 .v78_370 {
-  width: 300px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  border: 1px solid rgba(0,0,0,1);
-  overflow: hidden;
+    width: 300px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    overflow: hidden;
 }
+
 .kara {
-  width: 48px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 85px;
-  left: 343px;
-  font-family: Roboto;
-  font-size: 20px;
-  opacity: 1;
-  text-align: center;
+    width: 48px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 85px;
+    left: 343px;
+    font-family: Roboto;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
 }
+
 .v78_372 {
-  width: 120px;
-  color: rgba(0,0,0,0.25);
-  position: absolute;
-  top: 6px;
-  left: 93px;
-  font-family: Roboto;
-  font-weight: Regular;
-  font-size: 24px;
-  opacity: 1;
-  text-align: center;
+    width: 120px;
+    color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 6px;
+    left: 93px;
+    font-family: Roboto;
+    font-weight: Regular;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
 }
+
 .made {
-  width: 48px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 150px;
-  left: 343px;
-  font-family: Roboto;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: center;
+    width: 48px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 150px;
+    left: 343px;
+    font-family: Roboto;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
 }
