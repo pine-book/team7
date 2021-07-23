@@ -1,30 +1,24 @@
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
-const mongoose = require('mongoose');
-const Schedule = require('./models/schedule');
 
 const app = express();
 
-const url = "mongodb+srv://Team7:Qu0HLbs29Tf5DHri@cluster0.raqbv.mongodb.net/Schedule?retryWrites=true&w=majority";
-mongoose.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-}, () => console.log('db connecting!'));
 
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
+
+
 
 app.get('/', (req,res) => {
     res.sendFile(__dirname+'/vertida.html')
 })
 
-app.post('/:year/:month/:day', async (req,res) => {
+app.post('/:year/:month/:day', (req,res) => {
     const year = String(req.params["year"]);
     const month = String(req.params["month"]);
     const day = String(req.params["day"]);
-    const path = __dirname+"/db/"+year+"/"+month+"/"+day;
+    const path = "db/"+year+"/"+month+"/"+day;
     console.log("/"+year+"/"+month+"/"+day);
 
     const data = {
@@ -35,15 +29,15 @@ app.post('/:year/:month/:day', async (req,res) => {
         job_tag: req.body.job_tag,
         comment: req.body.comment
     };
- 
-    try{
-        fs.writeFileSync(`${path}/plan.json`, data); 
-        console.log(data);
-        res.end();
-    } catch (err) {
-        console.log(err);
-        res.end();
-    }
+
+    const content = JSON.stringify(data);
+
+    fs.mkdirSync(path, { recursive: true});
+    fs.writeFileSync(path+"/test.json", content);
+         
+
+    console.log(data);
+    res.end();
 })
 
 app.listen(3000, () => console.log("success!"));
