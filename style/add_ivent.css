@@ -5,13 +5,13 @@ body {
   font-size: 14px;
 }
 .header {
-  width: 1600px;
+  width: 1240px;
   height: 64px;
   background: rgba(196,196,196,1);
   opacity: 1;
   position: relative;
-  top: 0px;
-  left: 0px;
+  top: -10px;
+  left: -10px;
   overflow: hidden;
 }
 .leftscreen {
@@ -20,11 +20,11 @@ body {
   background: rgba(255,255,255,1);
   opacity: 1;
   position: relative;
-  top: 0px;
+  top: -10px;
   left: 0px;
 }
 .todays_scheduel {
-  height: 500px;
+  height: 600px;
   background: rgba(202, 255, 226, 0.46);
   overflow: hidden
 }
@@ -44,15 +44,6 @@ text-align: center;
 letter-spacing: 0.14em;
 text-decoration-line: underline;
  }
-.time_line{
-  width: 389px;
-  height: 450px;
-  position: absolute;
-  top: 80px;
-  left: 0px;
-  white-space: pre;
-  overflow: scroll;
-}
  .time {
   width: 48px;
   color: rgba(0,0,0,0.30000001192092896);

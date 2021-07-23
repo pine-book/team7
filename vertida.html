@@ -9,6 +9,8 @@
    <link href="./style/add_ivent.css" rel="stylesheet" />
    <title>Document</title>
    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+   <script src="src/schedule.js"></script>
+   <script src="src/getSource.js"></script>
 </head>
 
 <body>
@@ -19,89 +21,10 @@
 
    <div class="leftscreen">
       <div class="todays_scheduel">
-         <div class="date">4月1日(lie)</div>
-         <div class="time_line">
-            <div class="time">
-               <span class="time">00:00</span>
-            </div>
-            <div class="time">
-               <span class="time">1:00</span>
-            </div>
-            <div class="time">
-               <span class="time">2:00</span>
-            </div>
-            <div class="time">
-               <span class="time">3:00</span>
-            </div>
-            <div class="time">
-               <span class="time">4:00</span>
-            </div>
-            <div class="time">
-               <span class="time">5:00</span>
-            </div>
-            <div class="time">
-               <span class="time">6:00</span>
-            </div>
-            <div class="time">
-               <span class="time">7:00</span>
-            </div>
-            <div class="time">
-               <span class="time">8:00</span>
-            </div>
-            <div class="time">
-               <span class="time">9:00</span>
-            </div>
-            <div class="time">
-               <span class="time">10:00</span>
-            </div>
-            <div class="time">
-               <span class="time">11:00</span>
-            </div>
-            <div class="time">
-               <span class="time">12:00</span>
-            </div>
-            <div class="time">
-               <span class="time">13:00</span>
-            </div>
-            <div class="time">
-               <span class="time">14:00</span>
-            </div>
-            <div class="time">
-               <span class="time">15:00</span>
-            </div>
-            <div class="time">
-               <span class="time">16:00</span>
-            </div>
-            <div class="time">
-               <span class="time">17:00</span>
-            </div>
-            <div class="time">
-               <span class="time">18:00</span>
-            </div>
-            <div class="time">
-               <span class="time">19:00</span>
-            </div>
-            <div class="time">
-               <span class="time">20:00</span>
-            </div>
-            <div class="time">
-               <span class="time">21:00</span>
-            </div>
-            <div class="time">
-               <span class="time">22:00</span>
-            </div>
-            <div class="time">
-               <span class="time">21:00</span>
-            </div>
-            <div class="time">
-               <span class="time">22:00</span>
-            </div>
-            <div class="time">
-               <span class="time">23:00</span>
-            </div>
-            <div class="time">
-               <span class="time">24:00</span>
-            </div>
+         <div class="date">
+            <input type="button" value="読み込み" onclick="read()" />
+            <div id="data"></div>
+         </div>
       </div>
 
       <nav>
@@ -130,6 +53,8 @@
       </nav>
 
       <script type="text/javascript" src="src/menu.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 </body>
 
 </html>
