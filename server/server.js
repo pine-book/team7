@@ -5,7 +5,7 @@ const Schedule = require('./models/schedule');
 
 const app = express();
 
-const url = "mongodb+srv://ここにurlを貼ってください";
+const url = "mongodb+srv://Team7:Qu0HLbs29Tf5DHri@cluster0.raqbv.mongodb.net/Schedule?retryWrites=true&w=majority";
 mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -19,8 +19,11 @@ app.get('/', (req,res) => {
     res.sendFile(__dirname+'/vertida.html')
 })
 
-app.post('/post', async (req,res) => {
-
+app.post('/:year/:month/:day', async (req,res) => {
+    const year = req.params["year"];
+    const month = req.params["month"];
+    const day = req.params["day"];
+    console.log("/"+year+"/"+month+"/"+day);
     const data = {
         event_name: req.body.event_name,
         place_name: req.body.place_name,
