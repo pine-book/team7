@@ -1,4 +1,5 @@
 const express = require('express');
+const fs = require('fs');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const Schedule = require('./models/schedule');
@@ -20,10 +21,12 @@ app.get('/', (req,res) => {
 })
 
 app.post('/:year/:month/:day', async (req,res) => {
-    const year = req.params["year"];
-    const month = req.params["month"];
-    const day = req.params["day"];
+    const year = String(req.params["year"]);
+    const month = String(req.params["month"]);
+    const day = String(req.params["day"]);
+    const path = __dirname+"/db/"+year+"/"+month+"/"+day;
     console.log("/"+year+"/"+month+"/"+day);
+
     const data = {
         event_name: req.body.event_name,
         place_name: req.body.place_name,
@@ -32,11 +35,9 @@ app.post('/:year/:month/:day', async (req,res) => {
         job_tag: req.body.job_tag,
         comment: req.body.comment
     };
-    const schedule = new Schedule(data);
-
  
     try{
-        await schedule.save();
+        fs.writeFileSync(`${path}/plan.json`, data); 
         console.log(data);
         res.end();
     } catch (err) {
