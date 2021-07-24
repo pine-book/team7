@@ -1,13 +1,13 @@
-let rq;
-var frag;
-let month = 7,
-    day = 23;
+let rq
+let frag
+let month = 7
+let day = 23
 
 function read() {
     rq = new XMLHttpRequest();
     rq.open("GET", "Sample.json");
     rq.onreadystatechange = receive;
-    rq.send(null);
+    rq.send(null)
 }
 
 function receive() {
@@ -23,7 +23,7 @@ function receive() {
                 for (let i = 0; i < dat.length; i++) {
                     if (month == dat[i].month && day == dat[i].day) {
                         let str = '<p class="task_time">' + dat[i].time + '</p>' + '<p class="task_name">' + dat[i].name + '</p>';
-                        elm.innerHTML += str;
+                        elm.innerHTML += str
                     }
                 }
             }
