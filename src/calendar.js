@@ -1,12 +1,8 @@
-function create_cal() {
+function create_cal(year, month) {
     const weeks = ['日', '月', '火', '水', '木', '金', '土']
-    const date = new Date()
-    const year = date.getFullYear()
-    const month = date.getMonth() + 1
     const startDate = new Date(year, month - 1, 1)
     const endDate = new Date(year, month - 1, 0).getDate()
     const startDay = startDate.getDay()
-    console.log(startDate)
 
     let daycount = 1
     let calendarHtml = ''
@@ -32,6 +28,20 @@ function create_cal() {
         calendarHtml += '</tr>'
     }
     calendarHtml += '</table>'
-    console.log(calendarHtml)
     document.getElementById("calendar").innerHTML = calendarHtml
+}
+
+function showCalendar(year, month) {
+    for (i = 0; i < config.show; i++) {
+        const calendarHtml = createCalendar(year, month)
+        const sec = document.createElement('section')
+        sec.innerHTML = calendarHtml
+        document.querySelector('#calendar').appendChild(sec)
+
+        month++
+        if (month > 12) {
+            year++
+            month = 1
+        }
+    }
 }
