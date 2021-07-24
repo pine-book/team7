@@ -20,13 +20,13 @@ function create_cal(year, month) {
         calendarHtml += '<tr>'
         for (let i = 0; i < 7; i++) {
             if (i == startDay && daycount == 1) {
-                calendarHtml += '<td>' + daycount + '</td>'
+                calendarHtml += `<td class="calendar_td" data-date="${year}/${month}/${daycount}">${daycount}</td>`
                 daycount++
             } else if (daycount > 1 && daycount <= endDate) {
-                calendarHtml += '<td>' + daycount + '</td>'
+                calendarHtml += `<td class="calendar_td" data-date="${year}/${month}/${daycount}">${daycount}</td>`
                 daycount++
             } else {
-                calendarHtml += '<td></td>'
+                calendarHtml += '<td class="is-disabled"></td>'
             }
         }
         calendarHtml += '</tr>'
@@ -64,3 +64,14 @@ function prevCal() {
     }
     create_cal(year, month)
 }
+
+document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("calendar_td")) {
+        document.getElementById("date").innerHTML = null
+        var date = e.target.dataset.date
+        var year = e.target.dataset.year
+        var month = e.target.dataset.month
+        let s = year + "/" + month + "/" + date
+        document.getElementById("date").innerHTML = s
+    }
+})
