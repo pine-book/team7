@@ -13,10 +13,15 @@
 
 <body onload="show_day()">
     <div class="header">
+        <button id="prev" type="button">前の月</button>
+        <button id="next" type="button">次の月</button>
         <div class="yellow_button"></div>
         <button type="button" class="btn-menu">+</button>
-    </div>
 
+    </div>
+    <div class="rightScreen">
+        <div id="calendar"></div>
+    </div>
     <div class="leftscreen">
         <div class="todays_scheduel">
             <button id="button" onclick="read()"></button>
@@ -52,7 +57,7 @@
         <script type="text/javascript" src="src/menu.js"></script>
         <script type="text/javascript" src="src/getSource.js"></script>
         <script type="text/javascript" src="src/schedule.js"></script>
-
+        <script type="text/javascript" src="src/calendar.js"></script>
 </body>
 
 </html>

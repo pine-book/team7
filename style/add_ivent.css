@@ -17,6 +17,57 @@ body {
     overflow: hidden;
 }
 
+#prev {
+    position: relative;
+    top: 0px;
+    left: -200px;
+}
+
+#next {
+    position: relative;
+    top: 0px;
+    left: -400px;
+}
+
+.rightScreen {
+    position: absolute;
+    width: 766px;
+    height: 591px;
+    left: 400px;
+    top: 64px;
+    background: rgba(1, 196, 196, 1);
+}
+
+h1 {
+    font-size: 32px;
+    position: relative;
+    text-align: center;
+    top: -24px
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    position: absolute;
+    top: 40px;
+}
+
+td {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 32px;
+}
+
+td:first-child {
+    color: red;
+}
+
+td:last-child {
+    color: royalblue;
+}
+
 .leftscreen {
     width: 390px;
     height: 500px;
