@@ -1,7 +1,5 @@
 let rq
 let frag
-let month = 7
-let day = 23
 
 function read() {
     rq = new XMLHttpRequest();

@@ -1,7 +1,7 @@
 function show_day() {
-    const date = new Date()
-    const year = date.getFullYear()
-    const month = date.getMonth() + 1
+    var date = new Date()
+    var year = date.getFullYear()
+    var month = date.getMonth() + 1
     document.getElementById("date").innerHTML = get_day();
     create_cal(year, month)
 }
