@@ -67,11 +67,8 @@ function prevCal() {
 
 document.addEventListener("click", function(e) {
     if (e.target.classList.contains("calendar_td")) {
-        document.getElementById("date").innerHTML = null
-        var date = e.target.dataset.date
-        var year = e.target.dataset.year
-        var month = e.target.dataset.month
-        let s = year + "/" + month + "/" + date
-        document.getElementById("date").innerHTML = s
+        document.getElementById("date").innerHTML = ""
+        let date = e.target.dataset.date
+        document.getElementById("date").innerHTML = date
     }
 })
