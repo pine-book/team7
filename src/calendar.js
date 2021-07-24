@@ -43,8 +43,8 @@ function nextCal() {
     Number(month)
     month++
     console.log(month)
-    if (month == 12) {
-        month = 0
+    if (month == 13) {
+        month = 1
         year++
     }
     create_cal(year, month)
@@ -58,8 +58,8 @@ function prevCal() {
     Number(month)
     month--
     console.log(month)
-    if (month == 1) {
-        month = 13
+    if (month == 0) {
+        month = 12
         year--
     }
     create_cal(year, month)
