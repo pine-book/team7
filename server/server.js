@@ -21,14 +21,14 @@ app.post('/:year/:month/:day', (req,res) => {
     const path = "db/"+year+"/"+month+"/"+day;
     console.log("/"+year+"/"+month+"/"+day);
 
-    const data = [{
+    const data = {
         event_name: req.body.event_name,
         place_name: req.body.place_name,
         time_from: req.body.time_from,
         time_to: req.body.time_to,
         job_tag: req.body.job_tag,
         comment: req.body.comment
-    }];
+    };
 
     const content = JSON.stringify(data);
     
