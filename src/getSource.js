@@ -1,18 +1,18 @@
-let rq
+var rq
 let frag
 
-function read() {
+function read(year, month, day) {
     rq = new XMLHttpRequest();
     rq.open("GET", "Sample.json");
-    rq.onreadystatechange = receive;
+    rq.onreadystatechange = receive(year, month, day);
     rq.send(null)
 }
 
-function receive() {
-    let tmp;
+function receive(year, month, day) {
+    console.log(rq.readyState + day)
     if (rq.readyState == 4) {
-
         if (rq.status == 200) {
+            console.log("get json file successfully!")
             jdat = rq.responseText;
             let dat = eval("(" + jdat + ")");
 

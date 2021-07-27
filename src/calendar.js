@@ -70,5 +70,11 @@ document.addEventListener("click", function(e) {
         document.getElementById("date").innerHTML = ""
         let date = e.target.dataset.date
         document.getElementById("date").innerHTML = date
+        let data = date.split('/')
+        let year = data[0]
+        let month = data[1]
+        let day = data[2]
+        read(year, month, day)
+
     }
 })
