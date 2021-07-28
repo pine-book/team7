@@ -16,13 +16,18 @@ app.get('/', (req,res) => {
     res.sendFile(__dirname+'/vertida.html')
 })
 
-app.post('/:year/:month/:day', (req,res) => {
-    const year = String(req.params["year"]);
-    const month = String(req.params["month"]);
-    const day = String(req.params["day"]);
-    const path = "db/"+year+"/"+month+"/"+day;
-    console.log("/"+year+"/"+month+"/"+day);
+app.post('/:date', (req,res) => {
+    const dateBefore = req.params.date.split('-');
+    const dateAfter = req.body.time_to.split('-');
 
+  
+    const yearBefore = Number(dateBefore[0]);
+    const monthBefore = Number(dateBefore[1]);
+    const dayBefore = Number(dateBefore[2]);
+    const dayAfter = Number(dateAfter[2]);
+    
+    console.log("/"+yearBefore+"/"+monthBefore+"/"+dayBefore);
+    
     const data = {
         event_name: req.body.event_name,
         place_name: req.body.place_name,
@@ -33,14 +38,17 @@ app.post('/:year/:month/:day', (req,res) => {
     };
 
     const content = JSON.stringify(data);
-    
+
+  
+  for(let i=dayBefore; i<=dayAfter ;i++){
+    let path = "db/"+yearBefore+"/"+monthBefore+"/"+i;
     if(!fs.existsSync(path)){
       fs.mkdirSync(path, { recursive: true });
       fs.writeFileSync(path+"/test.json", content);
     }else{
       fs.appendFileSync(path+"/test.json", "\n"+content);
     }
-
+  }
     console.log(data);
     res.redirect('/');
 })
