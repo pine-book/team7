@@ -4,9 +4,11 @@ const cors = require('cors');
 
 const app = express();
 
-
+app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
+app.use('/style', express.static('style'));
+app.use('/src', express.static('src'));
 
 
 
@@ -40,7 +42,7 @@ app.post('/:year/:month/:day', (req,res) => {
     }
 
     console.log(data);
-    res.end();
+    res.redirect('/');
 })
 
 app.listen(3000, () => console.log("success!"));
