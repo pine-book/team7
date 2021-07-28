@@ -5,7 +5,6 @@ function create_cal(year, month) {
     const weeks = ['日', '月', '火', '水', '木', '金', '土']
     const startDate = new Date(year, month - 1, 1)
     const endDate = new Date(year, month, 0).getDate()
-    console.log(endDate)
     const startDay = startDate.getDay()
 
     let daycount = 1
@@ -39,11 +38,9 @@ function create_cal(year, month) {
 function nextCal() {
     let year = document.getElementById("year").textContent
     Number(year)
-    console.log(year)
     let month = document.getElementById("month").textContent
     Number(month)
     month++
-    console.log(month)
     if (month == 13) {
         month = 1
         year++
@@ -54,11 +51,9 @@ function nextCal() {
 function prevCal() {
     let year = document.getElementById("year").textContent
     Number(year)
-    console.log(year)
     let month = document.getElementById("month").textContent
     Number(month)
     month--
-    console.log(month)
     if (month == 0) {
         month = 12
         year--
