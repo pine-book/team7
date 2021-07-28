@@ -9,8 +9,9 @@ function create_cal(year, month) {
 
     let daycount = 1
     let calendarHtml = ''
-
     calendarHtml += '<h1>' + '<em id="year">' + year + '</em>' + '/' + '<em id="month">' + month + '</em>' + '</h1>'
+    calendarHtml += '<button id="prev" type="button" onclick="prevCal()">前の月</button>'    
+    calendarHtml += '<button id="next" type="button" onclick="nextCal()">次の月</button>'
     calendarHtml += '<table>'
     for (let i = 0; i < weeks.length; i++) {
         calendarHtml += '<td>' + weeks[i] + '</td>'
