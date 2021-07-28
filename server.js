@@ -24,6 +24,8 @@ app.post('/:date', (req,res) => {
     const yearBefore = Number(dateBefore[0]);
     const monthBefore = Number(dateBefore[1]);
     const dayBefore = Number(dateBefore[2]);
+    const yearAfter = Number(dateAfter[0]);
+    const monthAfter = Number(dateAfter[1]);
     const dayAfter = Number(dateAfter[2]);
     
     console.log("/"+yearBefore+"/"+monthBefore+"/"+dayBefore);
@@ -39,16 +41,20 @@ app.post('/:date', (req,res) => {
 
     const content = JSON.stringify(data);
 
-  
-  for(let i=dayBefore; i<=dayAfter ;i++){
-    let path = "db/"+yearBefore+"/"+monthBefore+"/"+i;
-    if(!fs.existsSync(path)){
-      fs.mkdirSync(path, { recursive: true });
-      fs.writeFileSync(path+"/test.json", content);
-    }else{
-      fs.appendFileSync(path+"/test.json", "\n"+content);
+    
+    for(let k=dayBefore; i<=dayAfter ;k++){
+     let path = "db/"+i+"/"+j+"/"+k;
+     if(!fs.existsSync(path)){
+       fs.mkdirSync(path, { recursive: true });
+       fs.writeFileSync(path+"/test.json", content);
+     }else{
+       fs.appendFileSync(path+"/test.json", "\n"+content);
+     }
+
+     if(k === dayAfter) break;
     }
-  }
+
+
     console.log(data);
     res.redirect('/');
 })
