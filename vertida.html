@@ -28,7 +28,6 @@
 
         <nav>
             <!-- actionにはサーバーのURLが入ります -->
-            <form action="" method="post">
                 <input type="text" name="event_name" placeholder="イベントを追加" id="form1">
                 <input type="text" name="place_name" placeholder="場所を追加" id="form4">
                 <input type="date" name="time_from" placeholder="7/24/12:30" id="form3">
@@ -43,18 +42,16 @@
                <option value="develop">開発</option>
                <option value="hobby">趣味</option>
                <option value="date">デート</option>
-            </select>
-                <button type="button" onclick="submit();" class="make-button">作成</button>
-            </form>
-            <form action='/' method="post" id="form6">
-                <textarea name="comment" cols="50" rows="5" placeholder="説明を追加"></textarea></p>
-            </form>
+                </select>
+                <button type="button" class="make-button">作成</button>
+                <textarea name="comment" cols="50" rows="5" placeholder="説明を追加" id="form6"></textarea></p>
         </nav>
 
         <script type="text/javascript" src="/src/menu.js"></script>
         <script type="text/javascript" src="/src/getSource.js"></script>
         <script type="text/javascript" src="/src/schedule.js"></script>
         <script type="text/javascript" src="/src/calendar.js"></script>
+        <script type="text/javascript" src="/src/submit.js"></script>
 </body>
 
 </html>
