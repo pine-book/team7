@@ -42,16 +42,15 @@ app.post('/:date', (req,res) => {
     const content = JSON.stringify(data);
 
     
-    for(let k=dayBefore; i<=dayAfter ;k++){
-     let path = "db/"+i+"/"+j+"/"+k;
+    for(let i=dayBefore; i<=dayAfter ;i++){
+     let path = "db/"+yearBefore+"/"+monthBefore+"/"+i;
      if(!fs.existsSync(path)){
        fs.mkdirSync(path, { recursive: true });
-       fs.writeFileSync(path+"/test.json", content);
+       fs.writeFileSync(path+"/data.json", content);
      }else{
-       fs.appendFileSync(path+"/test.json", "\n"+content);
+       fs.appendFileSync(path+"/data.json", "\n"+content);
      }
 
-     if(k === dayAfter) break;
     }
 
 

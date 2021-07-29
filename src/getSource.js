@@ -3,7 +3,7 @@ let frag
 
 function read(year, month, day) {
     rq = new XMLHttpRequest();
-    let path = year + "/" + month + "/" + day　 + "/" + "data.json"
+    let path = "../db/2021/07/29/data.json"
     rq.open("GET", path);
     rq.onreadystatechange = receive
     rq.send(null)
