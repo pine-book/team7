@@ -9,7 +9,7 @@ body {
 .header {
     width: 1280px;
     height: 64px;
-    background:#c7b374;
+    background: #c7b374;
     opacity: 1;
     position: relative;
     top: -10px;
@@ -70,7 +70,7 @@ td:last-child {
 
 .leftscreen {
     width: 370px;
-    height:0px;
+    height: 0px;
     background: rgba(255, 255, 255, 1);
     opacity: 1;
     position: relative;
@@ -80,7 +80,7 @@ td:last-child {
 
 .todays_schedule {
     height: 660px;
-    background:#50505035 ;
+    background: #50505035;
     overflow: hidden;
 }
 
@@ -109,6 +109,22 @@ td:last-child {
     font-size: 40px;
 }
 
+.place_name {
+    position: relative;
+    left: 20px;
+    top: -30px;
+    color: rgba(38, 45, 51, 0.6);
+    font-size: 20px;
+}
+
+.comment {
+    position: relative;
+    left: 20px;
+    top: -30px;
+    color: rgba(38, 45, 51, 0.6);
+    font-size: 20px;
+}
+
 
 /* ボタン */
 
@@ -116,7 +132,7 @@ td:last-child {
     width: 100px;
     height: 75px;
     z-index: 10;
-    color:#606060;
+    color: #606060;
     position: absolute;
     top: -10px;
     left: 0px;
@@ -142,7 +158,7 @@ td:last-child {
 /* メニュー */
 
 nav {
-    background:#505050;
+    background: #505050;
     position: absolute;
     z-index: 1;
     top: 0px;
