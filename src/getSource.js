@@ -1,9 +1,10 @@
 var rq
 let frag
 
-function read(year, month, day) {
+function read() {
+    const date = document.getElementById('date').innerText;
     rq = new XMLHttpRequest();
-    let path = "../db/2021/07/29/data.json"
+    let path = "/db/" + date + "/data.json"
     rq.open("GET", path);
     rq.onreadystatechange = receive
     rq.send(null)
