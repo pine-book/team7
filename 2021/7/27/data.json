@@ -1,0 +1,4 @@
+[
+    { "event_name": "勉強会", "place_name": "大学", "time_from": "18:00", "time_to": "20:00", "job_tag": "none", "comment": "ウェブ勉強" },
+    { "event_name": "勉強会2", "place_name": "大学2", "time_from": "18:00", "time_to": "20:00", "job_tag": "none", "comment": "ウェブ勉強" }
+]

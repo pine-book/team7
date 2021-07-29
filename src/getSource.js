@@ -1,32 +1,31 @@
-let rq
+var rq
 let frag
-let month = 7
-let day = 23
 
-function read() {
+function read(year, month, day) {
     rq = new XMLHttpRequest();
-    rq.open("GET", "Sample.json");
-    rq.onreadystatechange = receive;
+    let path = year + "/" + month + "/" + day　 + "/" + "data.json"
+    rq.open("GET", path);
+    rq.onreadystatechange = receive
     rq.send(null)
 }
 
 function receive() {
-    let tmp;
     if (rq.readyState == 4) {
-
         if (rq.status == 200) {
             jdat = rq.responseText;
-            let dat = eval("(" + jdat + ")");
-
+            let dat = eval("(" + jdat + ")")
             const elm = document.getElementById("day_task");
-            if (0 == elm.children.length) {
-                for (let i = 0; i < dat.length; i++) {
-                    if (month == dat[i].month && day == dat[i].day) {
-                        let str = '<p class="task_time">' + dat[i].time + '</p>' + '<p class="task_name">' + dat[i].name + '</p>';
-                        elm.innerHTML += str
-                    }
-                }
+            elm.innerHTML = ''
+            for (let i = 0; i < dat.length; i++) {
+                let str = '<p class="task_time">' + dat[i].time_from + "~" + dat[i].time_to + '</p>' + '<p class="task_name">' + dat[i].event_name + '</p>';
+                elm.innerHTML += str
             }
+
         }
+    } else {
+        let str = '<p class="task_name">予定はありません</p>'
+        const elm = document.getElementById("day_task");
+        elm.innerHTML = ''
+        elm.innerHTML += str
     }
 }

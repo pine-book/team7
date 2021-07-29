@@ -1,6 +1,9 @@
 function show_day() {
+    var date = new Date()
+    var year = date.getFullYear()
+    var month = date.getMonth() + 1
     document.getElementById("date").innerHTML = get_day();
-    create_cal()
+    create_cal(year, month)
 }
 
 function get_day() {
