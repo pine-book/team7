@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="./style/add_ivent.css" rel="stylesheet" />
+   <title>Document</title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+      <div class="screen">
+         <div class="top_ver"></div>
+         <div class="yellow_button"></div>
+         <button type="button" class="btn-menu">+</button>
+      <nav>
+         <!-- actionにはサーバーのURLが入ります -->
+            <form action="/2021/7/21" method="post">
+               <input type="text" name="event_name" placeholder="イベントを追加" id="form1">
+               <input type="text" name="place_name" placeholder="場所を追加" id="form4">
+                  <input type="text" name="time_from" placeholder="7/24/12:30" id="form3">
+                  <span class="kara">から</span>
+                  <input type="text" name="time_to" placeholder="7/24/15:00" id="form2">
+                  <span class="made">まで</span>
+               <select type="text" name="job_tag" id="form5">
+                  <option value="none">タグを選択</option>
+                  <option value="work">仕事</option>
+                  <option value="study">勉強</option>
+                  <option value="task">課題</option>
+                  <option value="develop">開発</option>
+                  <option value="hobby">趣味</option>
+                  <option value="date">デート</option>
+               </select>
+              <button type="button" onclick="submit();" class="make-button">作成</button>
+            <form action="/2021/7/21" id="form6">
+               <textarea name="comment" cols="50" rows="5" placeholder="説明を追加" id="form6"></textarea></p>
+            </form>
+      </nav>
+
+   <script type="text/javascript" src="src/menu.js"></script>
+</body>
+
+</html>
