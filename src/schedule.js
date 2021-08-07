@@ -4,6 +4,7 @@ function show_day() {
     var month = date.getMonth() + 1
     document.getElementById("date").innerHTML = get_day();
     create_cal(year, month)
+    read(year, month, date.getDate)
 }
 
 function get_day() {
