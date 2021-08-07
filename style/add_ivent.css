@@ -97,30 +97,33 @@ td:last-child {
 
 .task_time {
     position: relative;
-    width: 94px;
+    width: 241px;
     height: 23px;
     left: 13px;
-    top: 30px;
+    top: 100px;
     color: rgba(38, 45, 51, 0.6);
     font-size: 18px;
 }
 
 .task_name {
     font-size: 40px;
+    position: relative;
+    top: -16px;
+    left: 12px;
 }
 
 .place_name {
     position: relative;
-    left: 20px;
-    top: -30px;
+    left: 12px;
+    top: -40px;
     color: rgba(38, 45, 51, 0.6);
     font-size: 20px;
 }
 
 .comment {
     position: relative;
-    left: 20px;
-    top: -30px;
+    left: 12px;
+    top: -60px;
     color: rgba(38, 45, 51, 0.6);
     font-size: 20px;
 }
@@ -221,26 +224,9 @@ nav.open-menu {
     color: rgba(0, 0, 0, 0.3);
 }
 
-#form3 {
-    width: 300px;
-    height: 40px;
-    font-size: 20px;
-    position: absolute;
-    left: -4px;
-}
-
 #form3::placeholder {
     text-align: center;
     color: rgba(0, 0, 0, 0.3);
-}
-
-#form4 {
-    width: 300px;
-    height: 40px;
-    font-size: 20px;
-    position: relative;
-    top: 200px;
-    left: -33px;
 }
 
 #form4::placeholder {
@@ -260,13 +246,6 @@ nav.open-menu {
 #form5::tag {
     text-align: center;
     color: rgba(0, 0, 0, 0.3);
-}
-
-#form6 {
-    font-size: 20px;
-    position: relative;
-    top: 250px;
-    left: -33px;
 }
 
 textarea::placeholder {
@@ -299,12 +278,12 @@ textarea {
 }
 
 #form2 {
-    width: 300px;
+    width: 260px;
     height: 40px;
     font-size: 20px;
     position: relative;
     top: 25px;
-    left: -4px;
+    left: -24px;
 }
 
 #form2::placeholder {
@@ -313,11 +292,11 @@ textarea {
 }
 
 #form3 {
-    width: 300px;
+    width: 260px;
     height: 40px;
     font-size: 20px;
     position: relative;
-    left: -4px;
+    left: -24px;
 }
 
 #form3::placeholder {
@@ -358,7 +337,7 @@ textarea {
     position: relative;
     top: 250px;
     left: -4px;
-    top: 220px;
+    top: 150px;
 }
 
 textarea::placeholder {
@@ -407,7 +386,7 @@ textarea {
     color: rgba(0, 0, 0, 1);
     position: absolute;
     top: 85px;
-    left: 343px;
+    left: 300px;
     font-family: Roboto;
     font-size: 20px;
     opacity: 1;
@@ -432,7 +411,7 @@ textarea {
     color: rgba(0, 0, 0, 1);
     position: absolute;
     top: 150px;
-    left: 343px;
+    left: 300px;
     font-family: Roboto;
     font-weight: Regular;
     font-size: 20px;
