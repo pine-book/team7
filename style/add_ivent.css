@@ -81,7 +81,7 @@ td:last-child {
 .todays_schedule {
     height: 660px;
     background: #50505035;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 #date {
