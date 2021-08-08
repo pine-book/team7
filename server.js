@@ -26,29 +26,31 @@ app.post('/:date', (req,res) => {
     const yearBefore = Number(dateBefore[0]);
     const monthBefore = Number(dateBefore[1]);
     const dayBefore = Number(dateBefore[2]);
-    const yearAfter = Number(dateAfter[0]);
-    const monthAfter = Number(dateAfter[1]);
     const dayAfter = Number(dateAfter[2]);
     
     console.log("/"+yearBefore+"/"+monthBefore+"/"+dayBefore);
     
-    const data = [{
+    const data = {
         event_name: req.body.event_name,
         place_name: req.body.place_name,
         time_from: req.body.time_from,
         time_to: req.body.time_to,
         job_tag: req.body.job_tag,
         comment: req.body.comment
-    }];
+    };
 
     
     for(let i=dayBefore; i<=dayAfter ;i++){
      let path = "db/"+yearBefore+"/"+monthBefore+"/"+i;
      if(!fs.existsSync(path)){
+       const content = [];
+       content.push(data);
        fs.mkdirSync(path, { recursive: true });
-       fs.writeFileSync(path+"/data.json", JSON.stringify(data));
+       fs.writeFileSync(path+"/data.json", JSON.stringify(content));
      }else{
-       fs.writeFileSync(path+"/data.json", JSON.stringify(data));
+       const content = JSON.parse(fs.readFileSync(path+'/data.json'));
+       content.push(data);
+       fs.writeFileSync(path+"/data.json", JSON.stringify(content));
      }
 
     }
